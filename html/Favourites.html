@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Cars_Favorites_Page</title>
+    <link rel="icon" href="../css/logo_black.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
+    <link rel="stylesheet" href="../css/index.css"/>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .heading {
+            margin-top: 20px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+        }
+        .favorites-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            max-width: 1200px;
+        }
+        .car {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0px 10px rgb(160, 160, 160);
+            margin: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 280px;
+            position: relative;
+            height: 340px;
+        }
+        .car:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0px 20px rgb(113, 113, 113);
+        }
+        .car-image img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .car:hover .car-image img {
+            transform: scale(1.05);
+        }
+        .car-details {
+            padding: 20px;
+            text-align: center;
+        }
+        .car-details h2 {
+            margin: 0 0 10px;
+            font-size: 1rem;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .car:hover .car-details h2 {
+            color: #e74c3c;
+        }
+        .car-details p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .car-details .price {
+            margin-top: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #e74c3c;
+        }
+        .fav-remove {
+            margin-top: 15px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+        }
+        .fav-remove button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .fav-remove button:hover {
+            background-color: #c0392b;
+            transform: scale(1.1);
+        }
+        .line {
+          width: 150px;
+          height: 6px;
+          background-color: #e74c3c;
+            margin-top: -20px;
+          margin-bottom: 20px;
+        }
+        .Favorites_div1{
+            height: fit-content;
+            min-height: 600px;
+            width: 90%;
+            background-color: #fff;
+            margin: 6% 5%;
+            border-radius: 20px;
+            border: 1px solid black;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgb(214, 214, 214);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #brand img {
+            width: 120px;
+        }
+        #logindiv {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 40px;
+            height: 100%;
+            font-size: 1.5rem;
+        }
+        #logindiv {
+            height: 60px;
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 50px;
+            font-size: 1.3rem;
+            padding: 0px 130px;
+            background-color: #fff;
+            border-bottom: 1px solid black;
+            position: relative;
+            position: fixed;
+        }
+        #logindiv img{
+            height: 100px;
+            position: absolute;
+            top: -15px;
+            left: 10px;
+        }
+        .box img {
+            width: 180px !important;
+            height: 180px !important;
+        }
+    </style>
+</head>
+
+ <body>
+    <div id="logindiv">
+        <img src="../css/logo_black.png" alt="logo">
+        <div class="home-1"><a href="../html/index.html">Home</a></div>
+        <div class="Cart-1"><a href="./brands.html">Brands</a></div>
+        <div class="cars-1"><a href="../html/cars.html">Cars</a></div>
+        <div class="cart-1"><a href="../html/cart.html">Cart</a></div>
+    </div>
+    <div class="Favorites_div1" style="font-size: 20px;">
+        <div class="heading">Favorites</div>
+        <div class="line"></div>
+        <div class="favorites-container"></div>
+    </div>
+    <section class="footer" id="contact">
+        <div class="box-container">
+          <div class="box">
+            <img src="../css/logo_white.png"/>
+          </div>
+          <div class="box">
+            <h3>Our Branches</h3>
+            <a href=""> <i class="fas fa-map-marker-alt"></i> India </a>
+            <a href=""> <i class="fas fa-map-marker-alt"></i> France </a>
+            <a href=""> <i class="fas fa-map-marker-alt"></i> Africa </a>
+            <a href=""> <i class="fas fa-map-marker-alt"></i> Australia </a>
+            <a href=""> <i class="fas fa-map-marker-alt"></i> America </a>  
+          </div>
+          <div class="box">
+            <h3>Contact</h3>
+            <a href=""> <i class="fas fa-phone"></i> +91 9262214295 </a>
+            <a href=""> <i class="fas fa-phone"></i> +91 9262214296 </a>
+            <a href=""> <i class="fas fa-envelope"></i> WWcars@gmail.com </a>
+            <a href=""> <i class="fas fa-map-marker-alt"></i> Kakinada, India </a>
+          </div>
+          <div class="box">
+            <h3>Quick Links</h3>
+            <a href="https://www.facebook.com/"> <i class="fab fa-facebook-f"></i> Facebook </a>
+            <a href="https://x.com/"> <i class="fab fa-twitter"></i> Twitter </a>
+            <a href="https://www.instagram.com/"> <i class="fab fa-instagram"></i> Instagram </a>
+            <a href="https://www.linkedin.com/"> <i class="fab fa-linkedin"></i> Linkedin </a>
+            <a href="https://in.pinterest.com/"> <i class="fab fa-pinterest"></i> Pinterest </a>
+          </div>
+        </div>
+        <div class="credit"> Create by drive designer group | All Rights Reserved! </div>
+      </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", loadFavorites);
+        function loadFavorites() {
+            var favoritesContainer = document.querySelector(".favorites-container");
+            var favoriteCars = JSON.parse(localStorage.getItem("favoriteCars")) || [];
+            favoritesContainer.innerHTML = "";
+            if(favoriteCars.length === 0) {
+                favoritesContainer.innerHTML = "<p>No favorite cars added yet.</p>";
+                return;
+            }
+            favoriteCars.forEach((car) => {
+                var carElement = document.createElement("div");
+                carElement.classList.add("car");
+                carElement.innerHTML = `
+                    <div class="car-image">
+                        <img src="${car.source1}" alt="${car.name}">
+                    </div>
+                    <div class="car-details">
+                        <h2 class="name">${car.name}</h2>
+                        <p class="milage">${car.milage}</p>
+                        <p class="price">${car.price}</p>
+                    </div>
+                    <div class="fav-remove">
+                        <button onclick="removeFromFavorites(${car.id})">Remove</button>
+                    </div>
+                `;
+                favoritesContainer.appendChild(carElement);
+            });
+        }
+        function removeFromFavorites(id) {
+            var favoriteCars = JSON.parse(localStorage.getItem("favoriteCars")) || [];
+            favoriteCars = favoriteCars.filter(car => car.id !== id);
+            localStorage.setItem("favoriteCars", JSON.stringify(favoriteCars));
+            loadFavorites();
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script  type="text/javascript"  src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"></script>
+    <script src="../js/index.js"></script>
+ </body>
+</html>

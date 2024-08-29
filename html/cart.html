@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+  <head>
+    <title>Cars_Cart_Page</title>
+    <link rel="icon" href="../css/logo_black.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet"  href="../css/index.css"/>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+      body {
+        font-family: 'Poppins', Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+      .heading {
+        text-align: center;
+        font-size: 36px;
+        color: #333;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      .line {
+        width: 100px;
+        height: 6px;
+        background-color: #e74c3c;
+        margin-top: -10px;
+        margin-bottom: 30px;
+        border-radius: 3px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
+      .cart-item {
+        display: flex;
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: #fff;
+        justify-content: space-between;
+        padding: 5px 20px;
+        width: 100%;
+        width: 50vw;
+        flex-wrap: wrap;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .cart-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      .cart-item img {
+        width: 150px;
+        height: auto;
+      }
+      .cart-item-details {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .cart-item-details h2 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        color: #333;
+      }
+      .cart-item-details p {
+        margin: 0;
+        font-size: 15px;
+        color: #555;
+      }
+      .cart-item-remove {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+      }
+      .cart-item-remove button i{
+        color: #fff;
+      }
+      .cart-item-remove button {
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px 20px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+      .cart-item-remove button:hover {
+        background-color: #c82333;
+      }
+      .total-price {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #007bff;
+      }
+      .buy-now {
+        margin: 20px 0 0;
+        padding: 15px 30px;
+        font-size: 20px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        width: fit-content;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      .buy-now:hover {
+        background-color: #218838;
+        transform: scale(1.05);
+      }
+      .Cart_div1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
+        width: 90%;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid black;
+        margin: 6% 5% 1% 5%;
+        border-radius: 10px;
+        margin-bottom: 50px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgb(218, 218, 218);
+      }
+      #logindiv div a{
+        font-size: 1.3rem;
+      }
+      #logindiv {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 50px;
+        font-size: 1.5rem;
+        padding: 0px 130px;
+        background-color: #fff;
+        border-bottom: 1px solid black;
+        position: relative;
+        position: fixed;
+      }
+      #logindiv img{
+        height: 100px;
+        position: absolute;
+        top: -15px;
+        left: 10px;
+      }
+      .cart-container {
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+        width: 100%;
+        flex-wrap: wrap;
+      }
+      h2{
+        font-size: 24px;
+      }
+      p{
+        font-size: 16px;
+      }
+      @media (max-width: 320px){
+        .cart-item img {
+          width: 100%;
+        }
+      }
+      .box img {
+        width: 180px !important;
+        height: 180px !important;
+      }
+      </style>
+  </head>
+
+  <body> 
+    <div id="logindiv">
+      <img src="../css/logo_black.png" alt="logo">
+      <div class="home-1"><a href="../html/index.html">Home</a></div>
+      <div class="Cart-1"><a href="./brands.html">Brands</a></div>
+      <div class="cars-1"><a href="../html/cars.html">Cars</a></div>
+      <div class="cart-1"><a href="../html/Favourites.html">Favorites</a></div>
+    </div>
+    <div class="Cart_div1">
+      <div class="heading">My Cart</div>
+      <div class="line"></div>
+      <div class="cart-container"></div>
+      <div class="total-price">
+        <p>Total: $0</p>
+      </div>
+      <button class="buy-now">Buy Now</button>
+    </div>
+    <section class="footer" id="contact">
+      <div class="box-container">
+        <div class="box">
+          <img src="../css/logo_white.png"/>
+        </div>
+        <div class="box">
+          <h3>Our Branches</h3>
+          <a href=""> <i class="fas fa-map-marker-alt"></i> India </a>
+          <a href=""> <i class="fas fa-map-marker-alt"></i> France </a>
+          <a href=""> <i class="fas fa-map-marker-alt"></i> Africa </a>
+          <a href=""> <i class="fas fa-map-marker-alt"></i> Australia </a>
+          <a href=""> <i class="fas fa-map-marker-alt"></i> America </a>
+        </div>
+        <div class="box"> 
+          <h3>Contact</h3>
+          <a href=""> <i class="fas fa-phone"></i> +91 9262214295 </a>
+          <a href=""> <i class="fas fa-phone"></i> +91 9262214296 </a>
+          <a href=""> <i class="fas fa-envelope"></i> WWcars@gmail.com </a>
+          <a href=""> <i class="fas fa-map-marker-alt"></i> Kakinada, India </a>
+        </div>
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a href="https://www.facebook.com/"> <i class="fab fa-facebook-f"></i> Facebook </a>
+          <a href="https://x.com/"> <i class="fab fa-twitter"></i> Twitter </a>
+          <a href="https://www.instagram.com/"> <i class="fab fa-instagram"></i> Instagram </a>
+          <a href="https://www.linkedin.com/"> <i class="fab fa-linkedin"></i> Linkedin </a>
+          <a href="https://in.pinterest.com/"> <i class="fab fa-pinterest"></i> Pinterest </a>
+        </div>
+      </div>
+      <div class="credit"> Create by drive designer group | All Rights Reserved! </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", loadCart);
+
+      function loadCart() {
+        var cartContainer = document.querySelector(".cart-container");
+        var totalPriceElement = document.querySelector(".total-price p");
+        var cartCars = JSON.parse(localStorage.getItem("cartCars")) || [];
+        if(cartCars.length === 0) {
+          cartContainer.innerHTML = "<p>No items in the cart yet.</p>";
+          totalPriceElement.textContent = "Total: $0";
+          return;
+        }
+        cartContainer.innerHTML = "";
+        let totalPrice = 0;
+        cartCars.forEach((car) => {
+          var carElement = document.createElement("div");
+          carElement.classList.add("cart-item");
+          carElement.dataset.id = car.id;
+          carElement.innerHTML = `
+                    <img src="${car.source1}" alt="${car.name}">
+                    <div class="cart-item-details">
+                        <h2>${car.name}</h2>
+                        <p>${car.price}</p>
+                    </div>
+                    <div class="cart-item-remove">
+                        <button onclick="removeFromCart(${car.id})"><i class="ri-delete-bin-line"></i></button>
+                    </div>
+                `;
+          carElement.addEventListener('click', () => {
+            carElement.style.backgroundColor = '#e9ecef';
+            setTimeout(() => {
+              carElement.style.backgroundColor = '#fff';
+            }, 300);
+          });
+          cartContainer.appendChild(carElement);
+          totalPrice += parseInt(car.price.replace(/[^0-9]/g, ""));
+        });
+        totalPriceElement.textContent = `Total: $${totalPrice.toLocaleString()}`;
+      }
+      function removeFromCart(id) {
+        var cartCars = JSON.parse(localStorage.getItem("cartCars")) || [];
+        cartCars = cartCars.filter((car) => car.id !== id);
+        localStorage.setItem("cartCars", JSON.stringify(cartCars));
+        loadCart();
+      }
+      var b = document.getElementsByClassName('buy-now')[0];
+      b.onclick = function() {
+        window.location.href = 'buy_car.html';
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+@font-face {
+    font-family: Riviera Nights Medium;
+    src: url(./RivieraNights-Medium.ttf);
+}
+:root{
+    --box-shadow:0.3rem 0.3rem rgba(0, 0, 0, 0.37);
+}
+.header{ 
+    height: 100px;
+    width: 100%;
+    background-color: #e92626;
+    margin-bottom: 20px;
+}
+.Brands_Logo_imges{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+.logo_imgs_div{
+    height: 200px;
+    width: 250px;
+    background-color: #ffffff;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem .5rem 2rem .5rem;
+    border: 1px solid black;
+    margin: 20px;
+    transition: all .8s;
+}
+.logo_imgs_div:hover{
+    transform: scale(1.05);
+    box-shadow: 7px 8px 0px black;
+}
+.logo_img{
+    height: 100%;
+    width: 100%;
+    transition: all .8s;
+}
+.logo_imgs{
+    height: 90%;
+    width: 90%;
+    margin: 5%;
+    transition: all .8s;
+}
+.logo_imgs_div:hover .logo_img{
+    transform: scale(.9);
+}
+.logo_imgs_div:hover .logo_imgs{
+    transform: scale(.9);
+}
+.box img {
+    width: 180px !important;
+    height: 180px !important;
+}

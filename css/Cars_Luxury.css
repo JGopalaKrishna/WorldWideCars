@@ -1,0 +1,662 @@
+@font-face {
+  font-family: Riviera Nights Medium;
+  src: url(./RivieraNights-Medium.ttf);
+}
+*{ 
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+}
+.noscroll {
+  overflow: hidden;
+}
+.main {
+  width: 100%;
+  transition: all 0.5s;
+}
+.main:nth-of-type(2n):hover {
+  transform: translateY(-9px);
+}
+.main:nth-of-type(n):hover {
+  transform: translateY(9px);
+}
+.high-end-luxury {
+  margin-top: 84px;
+  margin: 3%;
+  width: 94%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(179, 178, 178);
+  padding-bottom: 20px;
+}
+.luxury,.premium,.main-stream {
+  margin-top: 50px;
+  margin: 3%;
+  width: 94%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgb(179, 178, 178);
+  padding-bottom: 20px;
+}
+.name{
+  height: 90px;
+  width: 100%;
+  font-size: 2.5rem;
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+.images,.images2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.images2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  display: none;
+}
+.img {
+  height: 320px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  border: 1px solid rgb(174, 174, 174);
+  overflow: hidden;
+  margin-left: 20px;
+  margin-right: 20px;
+  transition: all 0.75s;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+h1{
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Riviera Nights Medium";
+}
+.img:hover {
+  box-shadow: 0px 0px 20px rgb(145, 145, 145);
+}
+.top {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
+  overflow: hidden;
+  }
+.top img {
+  height: 100%;
+}
+.luxury img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-stream img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.premium img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.car-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.bottom {
+  height: 78px;
+  width: 100%;
+  padding: 0px 10px;
+}
+.bot1 {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+.bot2 {
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+.cost {
+  color: black;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: 5px 7px;
+}
+.details {
+  height: 34px;
+  width: 100px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #0979B6;
+  border: 2px solid #0979B6;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s;
+}
+.details:hover {
+  background-color: #0979B6;
+  color: white;
+}
+.viewmore,.viewless {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 9999;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.viewless {
+  display: none;
+}
+button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #0979B6;
+  cursor: pointer;
+  margin-right: 40px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+@media (max-width: 1310px) {
+  .images .img:nth-child(3) {
+    display: none;
+  }
+  .images2 .img:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 830px) {
+  .images .img:nth-child(3) {
+    display: block;
+  }
+  .images2 .img:nth-child(3) {
+    display: block;
+  }
+}
+.inner {
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  z-index: 9999 !important;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgb(152, 152, 152);
+  display: none;
+}
+.left,.right {
+  width: 100%;
+}
+.right {
+  padding-left: 20px;
+}
+.left {
+  margin-bottom: 20px;
+}
+.namee {
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.detailss,.costt,.stars,.desc,.last {
+  width: 100%;
+  margin: 10px 0;
+}
+.detailss,.costt,.stars {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+}
+.matter {
+  font-size: 0.9rem;
+}
+.detailss {
+  font-size: 0.9rem;
+}
+.staricons {
+  display: flex;
+  padding: 10px;
+}
+.stars {
+  display: flex;
+  justify-content: start;
+  opacity: 0.7;
+}
+.desc {
+  font-size: 0.9rem;
+}
+.last {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+.buy {
+  font-size: 1.1rem;
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #c0392b;
+  color: white;
+  padding: 5px 15px;
+}
+.costt {
+  color: #0979b6;
+}
+.cart {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.staricons img {
+  height: 20px;
+  width: 20px;
+}
+.cart img {
+  height: 40px;
+  width: 40px;
+}
+.carousel-1 img {
+  width: 100%;
+  margin: 40px 0;
+}
+.slick-prev {
+  left: 10px;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 10px rgb(155, 155, 155);
+  z-index: 1000;
+}
+.slick-next {
+  right: -25px;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 10px rgb(155, 155, 155);
+  z-index: 1000;
+}
+.slick-prev:hover,.slick-next:hover {
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 15px rgb(155, 155, 155);
+}
+@media (min-width: 769px) {
+  .left,.right {
+    width: 48%;
+  }
+  .carousel-1 img {
+    height: 350px;
+  }
+}
+@media (min-width: 1024px) {
+  .left,.right {
+    width: 45%;
+  }
+}
+@media (max-width: 400px) {
+  .namee {
+    font-size: 1.8rem;
+  }
+  .detailss,.costt,.matter {
+    font-size: 1.2rem;
+  }
+  .desc {
+    font-size: 0.8rem;
+  }
+  .staricons img {
+    height: 10px;
+    width: 10px;
+  }
+  .cart img {
+    height: 25px;
+    width: 25px;
+  }
+  .buy {
+    font-size: 0.8rem;
+  }
+}
+.cross-mark {
+  position: absolute;
+  top: -50px;
+  right: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
+}
+@media (max-width: 450px) {
+  .cross-mark {
+    position: absolute;
+    top: 0px;
+    z-index: 99999;
+  }
+}
+@media (max-width: 800px) {
+  .inner {
+    width: 300px;
+    height: 400px;
+  }
+  .inner img {
+    width: 300px;
+  }
+  .left,.right {
+    height: 200px;
+  }
+  .namee {
+    font-size: 20px;
+  }
+  .stars {
+    display: none;
+  }
+  .desc {
+    display: none;
+  }
+  .costt {
+    font-size: 20px;
+  }
+  .last {
+    position: absolute;
+    bottom: 0;
+  }
+}
+@media (max-width: 768px) {
+  .bot1 {
+    font-size: 1rem;
+  }
+  .details {
+    font-size: 1rem;
+    width: 80px;
+  }
+  button {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+  .fav {
+    position: absolute;
+    width: 30px;
+    top: 45px;
+    right: 35%;
+  }
+  .cartt {
+    margin-top: 35px;
+  }
+  .fav img {
+    width: 20px;
+  }
+  .costt {
+    padding-bottom: 30px;
+  }
+  .buy {
+    margin-top: 35px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .slick-dots {
+    color: white;
+    display: none;
+  }    
+}
+.filter_divison{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0px 0px 0px 140px !important;
+  border-bottom: 1px solid #000000;
+  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+}
+.mywwc_logo{
+  height: 100px;
+  position: absolute;
+  top: -15px;
+  left: 10px;
+}
+.filter_options{
+  height: 80%;
+  width: fit-content;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+  display: none;
+  position: absolute;
+  right: 100px;
+  top: 10px;
+}
+.filter_divison a {
+  font-size: 20px !important;
+}
+.filter_items{
+  height: fit-content;
+  width: fit-content;
+  padding: 2px 15px;
+  background-color: #fff;
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.Brands_items{
+  height: fit-content;
+  width: 150px;
+  position: absolute;
+  top: 110%;
+  left: 5%;
+  font-size: 18px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgb(0, 0, 0);
+  border-radius: 15px;
+  border: 2px solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  display:none;
+}
+.Brands_items1{
+  height: fit-content;
+  width: 150px;
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+}
+.Prise_items{
+  height: fit-content;
+  width: 150px;
+  padding: 10px 10px 10px 5px;
+  position: absolute;
+  top: 110%;
+  left: 5%;
+  font-size: 16px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgb(0, 0, 0);
+  border-radius: 15px;
+  border: 2px solid rgb(0, 0, 0);
+  z-index: 1;
+  display: none;
+}
+label{
+  transition: all 0.1s;
+}
+label:hover{
+  color: #ed1212;
+  font-weight: bolder;
+}
+.filter_logo{
+  height: 45px;
+  background-color: #222;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+  color: #fff;
+  border-radius: 7px;
+  border: 2px solid rgb(255, 255, 255);
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  padding: 7px 30px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+@media (max-width: 400px) {
+  .filter_logo {
+    font-size: 10px;
+  }
+  .filter_divison a {
+    font-size: 15px !important;
+  }
+}
+.Filter_cars_display{
+  min-height: 500px;
+  max-height: fit-content;
+  width: 94%;
+  background-color: #fff;
+  margin: 6% 3% 3% 3%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(179, 178, 178);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  flex-wrap: wrap;
+}
+.Filter_cars_display .img{
+  display: none;
+  margin: 20px;
+}
+.Filter_Not_Aply{
+  display: none;
+}
+.footer{
+  background-color: black;
+  color: white;
+  font-size: 16px;
+}
+.footer .box-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer .box-container .box{
+  height:250px;
+  width: 200px;
+}
+.footer .box-container .box img{
+  margin-top: 65px;
+  height: 120px;
+  width: 100%;
+}
+.footer .box-container .box h3{
+  color: white;
+  padding: 1rem 0;
+  font-size: 18px;
+}
+.footer .box-container .box a{
+  color: white;
+  display: block;
+  padding: .5rem 0;
+}
+.footer .box-container .box a i{
+  padding-right: .5rem;
+  color: white;
+}
+.footer .box-container .box a:hover i{
+  padding-right: 2rem;
+  color: white;
+}
+.footer .credit{
+  text-align: center;
+  border-top: .1rem solid rgba(0,0,0,.1);;
+  padding-top: 2.5rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+section{
+  padding: 2rem 9%;
+}
+.car_name {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.filter_divison {
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .filter_divison {
+    gap: 10px !important;
+  }
+}
+.home-1 a, .Fav-1 a, .Cart-1 a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+.box a {
+  text-decoration: none;
+}
+.box img {
+  width: 180px !important;
+  height: 180px !important;
+}
+.buy {
+  cursor: pointer;
+}
+.page{
+  margin-top: 80px;
+}

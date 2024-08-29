@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Cars_Deatils_Page</title>
+    <link rel="icon" href="../css/logo_black.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="crossorigin="anonymous"referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="../slick-1.8.1/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="../slick-1.8.1/slick-1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="../css/Cars_Luxury.css">
+    <style>@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");</style>
+  </head>
+
+  <body>
+    <div class="filter_divison"> 
+      <img src="../css/logo_black.png" alt="logo" class="mywwc_logo">
+      <div class="home-1"><a href="./index.html">Home</a></div>
+      <div class="Cart-1"><a href="./brands.html">Brands</a></div>
+      <div class="Fav-1"><a href="./Favourites.html">Favourites</a></div>
+      <div class="Cart-1"><a href="./cart.html">Cart</a></div>
+      <div class="filter_options">
+          <div class="filter_items">
+              <div onclick="Brands_itm()">Brands<i class="fa-solid fa-angle-down"></i></div>
+              <div class="Brands_items">
+                  <div class="Brands_items1">
+                      <input type="checkbox" onchange="Filter_fun_C('RollsRoyce',0)" id="Brand0"/><label for="Brand0">&nbsp;RollsRoyce</label><br>
+                      <input type="checkbox" onchange="Filter_fun_C('Lamborghini',1)" id="Brand1"/><label for="Brand1">&nbsp;Lamborghini</label><br>
+                      <input type="checkbox" onchange="Filter_fun_C('Ferrari',2)" id="Brand2"/><label for="Brand2">&nbsp;Ferrari</label><br>
+                      <input type="checkbox" onchange="Filter_fun_C('Mercedes',3)" id="Brand3"/><label for="Brand3">&nbsp;Mercedes</label><br>
+                      <input type="checkbox" onchange="Filter_fun_C('BMW',4)" id="Brand4"/><label for="Brand4">&nbsp;BMW</label><br>
+                      <input type="checkbox" onchange="Filter_fun_C('Audi',5)" id="Brand5"/><label for="Brand5">&nbsp;Audi</label><br>
+                      <input type="checkbox" onchange="Filter_fun_C('Tesla',6)" id="Brand6"/><label for="Brand6">&nbsp;Tesla</label><br>
+                      <input type="checkbox" onchange="Filter_fun_C('Volvo',7)" id="Brand7"/><label for="Brand7">&nbsp;Volvo</label><br>
+                      <input type="checkbox" onchange="Filter_fun_C('Infiniti',8)" id="Brand8"/><label for="Brand8">&nbsp;Infiniti</label><br>
+                      <input type="checkbox" onchange="Filter_fun_C('Toyota',9)" id="Brand9"/><label for="Brand9">&nbsp;Toyota</label><br>
+                      <input type="checkbox" onchange="Filter_fun_C('Ford',10)" id="Brand10"/><label for="Brand10">&nbsp;Ford</label><br>
+                      <input type="checkbox" onchange="Filter_fun_C('Kia',11)" id="Brand11"/><label for="Brand11">&nbsp;Kia</label><br>
+                  </div>
+              </div>
+          </div>
+          <div class="filter_items" >
+              <div onclick="Pri_itm()">$Price <i class="fa-solid fa-angle-down"></i></div>
+              <div class="Prise_items">
+                  <input type="checkbox" onchange="Filter_fun_P('fiveK',12)" id="Brand12"/><label for="Brand12"> &nbsp;Near $500K </label><br>
+                  <input type="checkbox" onchange="Filter_fun_P('fourK',13)" id="Brand13"/><label for="Brand13"> &nbsp;Near $400K </label><br>
+                  <input type="checkbox" onchange="Filter_fun_P('threeK',14)" id="Brand14"/><label for="Brand14"> &nbsp;Near $300K </label><br>
+                  <input type="checkbox" onchange="Filter_fun_P('twoK',15)" id="Brand15"/><label for="Brand15"> &nbsp;Near $200K </label><br>
+                  <input type="checkbox" onchange="Filter_fun_P('oneK',16)" id="Brand16"/><label for="Brand16"> &nbsp;Near $100K </label><br>
+                  <input type="checkbox" onchange="Filter_fun_P('halfK',17)" id="Brand17"/><label for="Brand17"> &nbsp;Near $50K </label><br>
+              </div>
+          </div>
+      </div>
+      <div class="filter_logo" onclick="filtr_op()"><i class="fa-solid fa-filter"></i>&nbsp;Filter</div>
+  </div>
+    <div class="inner">
+      <div class="cross-mark" onclick="closePopUp()">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="left">
+        <div class="carousel-1">
+          <div class="slider"><img src="" alt="Car 1" /></div>
+          <div class="slider"><img src="" alt="Car 2" /></div>
+          <div class="slider"><img src="" alt="Car 3" /></div>
+          <div class="slider"><img src="" alt="Car 4" /></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="namee"></div>
+        <div class="detailss"></div>
+        <div class="costt"></div>
+        <div class="stars">
+          <div class="staricons">
+            <div class="icon">
+              <img src="" alt="" />
+            </div>
+            <div class="icon"><img src="" alt="" /></div>
+            <div class="icon"><img src="" alt="" /></div>
+            <div class="icon"><img src="" alt="" /></div>
+            <div class="icon"><img src="" alt="" /></div>
+          </div>
+          <div class="matter">(326 rating)</div>
+        </div>
+        <div class="desc"></div>
+        <div class="last">
+          <div class="buy">BUY</div>
+          <div class="cart">
+            <div class="cartt"><img src="./Stars-cart/shopping-cart.svg" alt="" /></div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="fav">
+              <img src="./Stars-cart/heart2.png" alt=""/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+    <div class="main">
+      <div class="high-end-luxury">
+        <div class="name"><h1>High-End</h1></div>
+        <div class="images" data-aos="fade-up" data-aos-duration="2000">
+          <div class="img">
+            <div class="top">
+              <img src="../img/CarImages/Lamborghini/LamborghiniRevulto/1.1.jpg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1"> 
+                <div class="car_name">Lamborghini Revulto</div>
+                <div class="cost">$311,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="0" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img">
+            <div class="top">
+              <img src="../img/CarImages/Ferrari/FerrariPortofino/1.1.avif" alt="" class="car-img"/>
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Ferrari Portofino</div>
+                <div class="cost">$304,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="1" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img">
+            <div class="top">
+              <img src="../img/CarImages/RollsRoyce/RollsRoyceGhost/1.1.webp" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">RollsRoyce Ghost</div>
+                <div class="cost">$318,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="2" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="viewmore">
+          <button class="view" onclick="viewMore()">View More &#8594;</button>
+        </div>
+        <div class="images2" data-aos="fade-up" data-aos-duration="2000">
+          <div class="img">
+            <div class="top">
+              <img src="../img/CarImages/Lamborghini/LamborghiniSianFKP37/1.1.jpg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Lamborghini Sian</div>
+                <div class="cost">$450,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="3" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img">
+            <div class="top">
+              <img src="../img/CarImages/Ferrari/FerrariSF90/1.1.jpg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Ferrari SF90</div>
+                <div class="cost">$410,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="4" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img">
+            <div class="top">
+              <img src="../img/CarImages/RollsRoyce/RollsRoyceSilverSpur/1.1.jpg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">RollsRoyce Silver Spur</div>
+                <div class="cost">$498,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="5" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="viewless">
+          <button class="view" onclick="viewLess()">&#8592; View Less</button>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="luxury">
+        <div class="name"><h1>Luxury</h1></div>
+        <div class="images" data-aos="fade-up" data-aos-duration="2000">
+          <div class="img">
+            <div class="top">
+              <img src="../img/Luxury-and-Mainstream/BMW/BMW 3 Series_FV.jpeg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">BMW 3 Series</div>
+                <div class="cost">$290,900</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="6" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img">
+            <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Audi/1.1.jpeg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Audi A8</div>
+                <div class="cost">$280,900</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="7" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img">
+            <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Mercedes-Benz/Mercedes-Benz A-Class Limousine_FV.jpeg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Benz A-Class</div>
+                <div class="cost">$475,900</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="8" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="viewmore">
+          <button class="view" onclick="viewMore1()">View More &#8594;</button>
+        </div>
+        <div class="images2" data-aos="fade-up" data-aos-duration="2000">
+          <div class="img">
+            <div class="top">
+              <img src="../img/Luxury-and-Mainstream/BMW/BMW 7 Series_FV.jpeg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">BMW 7 Series</div>
+                <div class="cost">$196,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="9" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img">
+            <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Audi/2.1.jpeg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Audi Q7</div>
+                <div class="cost">$140,700</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="10" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img">
+            <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Mercedes-Benz/Mercedes-Benz GLE_FV.jpeg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Benz GLE</div>
+                <div class="cost">$353,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="11" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="viewless">
+          <button class="view" onclick="viewLess1()">&#8592; View Less</button>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="premium">
+        <div class="name"><h1>Premium</h1></div>
+        <div class="images" data-aos="fade-up" data-aos-duration="2000">
+          <div class="img">
+            <div class="top">
+              <img src="../img/PremiumImages/tesla/tesla1.jpg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Tesla Model X</div>
+                <div class="cost">$201,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="12" onclick="popup2(this.id)" onclick="popUp()">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img">
+            <div class="top">
+              <img src="../img/PremiumImages/volvo/volvo1.webp" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Volvo XC90</div>
+                <div class="cost">$190,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="13" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img">
+            <div class="top">
+              <img src="../img/PremiumImages/infinite/infinate13.jpg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Infiniti QX55</div>
+                <div class="cost">$99,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="14" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="viewmore">
+          <button class="view" onclick="viewMore2()">View More &#8594;</button>
+        </div>
+        <div class="images2" data-aos="fade-up" data-aos-duration="2000">
+          <div class="img">
+            <div class="top">
+              <img src="../img/PremiumImages/tesla/tesla23.jpg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Telsa Model Y</div>
+                <div class="cost">$120,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="15" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img">
+            <div class="top">
+              <img src="../img/PremiumImages/volvo/volvo6.jpg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Volvo S90</div>
+                <div class="cost">$234,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="16" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img">
+            <div class="top">
+              <img src="../img/PremiumImages/infinite/infinate3.avif" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Infiniti ESQ</div>
+                <div class="cost">$49,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="17" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="viewless">
+          <button class="view" onclick="viewLess2()">&#8592; View Less</button>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="main-stream">
+        <div class="name"><h1>Main Stream</h1></div>
+        <div class="images" data-aos="fade-up" data-aos-duration="2000">
+          <div class="img">
+            <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Toyota/1.1.jpeg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Toyota Camry</div>
+                <div class="cost">$84,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="18" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img">
+            <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Ford/1.1.jpeg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Ford Endeavoru</div>
+                <div class="cost">$48,900</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="19" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img">
+            <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Kia/1.1.jpeg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Kia Seltos</div>
+                <div class="cost">$91,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="20" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="viewmore">
+          <button class="view" onclick="viewMore3()">View More &#8594;</button>
+        </div>
+        <div class="images2" data-aos="fade-up" data-aos-duration="2000">
+          <div class="img">
+            <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Toyota/2.1.jpeg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Toyota Fortuner</div>
+                <div class="cost">$45,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="21" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img">
+            <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Ford/2.1.jpeg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Ford EcoSport</div>
+                <div class="cost">$85,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="22" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="img">
+            <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Kia/2.1.jpeg" alt="" class="car-img" />
+            </div>
+            <div class="bottom">
+              <div class="bot1">
+                <div class="car_name">Kia Carnival</div>
+                <div class="cost">$37,000</div>
+              </div>
+              <div class="bot2">
+                <div class="details" id="23" onclick="popup2(this.id)">
+                  Details
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="viewless">
+          <button class="view" onclick="viewLess3()">&#8592; View Less</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- filter div -->
+    <div class="Filter_cars_display">
+      <div class="Filter_Not_Aply"><h1>No Filter Apply</h1></div>
+      <div class="img RollsRoyce fiveK">
+          <div class="top">
+              <img src="../img/CarImages/RollsRoyce/RollsRoyceSilverSpur/1.1.jpg" alt=""class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">RollsRoyce Silver Spur</div>
+                  <div class="cost">$498,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="5" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img RollsRoyce fourK">
+          <div class="top">
+              <img src="../img/CarImages/RollsRoyce/RollsRoyceGhost/1.1.webp" alt=""class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">RollsRoyce Ghost</div>
+                  <div class="cost">$318,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="2" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Lamborghini fiveK">
+          <div class="top">
+              <img src="../img/CarImages/Lamborghini/LamborghiniSianFKP37/1.1.jpg" alt=""class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Lamborghini Sian</div>
+                  <div class="cost">$450,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="3" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Lamborghini fourK">
+          <div class="top">
+              <img src="../img/CarImages/Lamborghini/LamborghiniRevulto/1.1.jpg" alt=""class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Lamborghini Revulto</div>
+                  <div class="cost">$311,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="0" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Ferrari fiveK">
+          <div class="top">
+              <img src="../img/CarImages/Ferrari/FerrariSF90/1.1.jpg" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Ferrari SF90</div>
+                  <div class="cost">$410,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="4" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Ferrari fourK">
+          <div class="top">
+              <img src="../img/CarImages/Ferrari/FerrariPortofino/1.1.avif" alt=""class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Ferrari Portofino</div>
+                  <div class="cost">$304,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="1" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Mercedes fiveK">
+          <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Mercedes-Benz/Mercedes-Benz A-Class Limousine_FV.jpeg"
+                  alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Benz A-Class</div>
+                  <div class="cost">$475,900</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="8" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Mercedes fourK">
+          <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Mercedes-Benz/Mercedes-Benz GLE_FV.jpeg" alt=""
+                  class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Benz GLE</div>
+                  <div class="cost">$353,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="11" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img BMW threeK">
+          <div class="top">
+              <img src="../img/Luxury-and-Mainstream/BMW/BMW 3 Series_FV.jpeg" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">BMW 3 Series</div>
+                  <div class="cost">$290,900</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="6" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img BMW twoK">
+          <div class="top">
+              <img src="../img/Luxury-and-Mainstream/BMW/BMW 7 Series_FV.jpeg" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">BMW 7 Series</div>
+                  <div class="cost">$196,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="9" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Audi threeK">
+          <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Audi/1.1.jpeg" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Audi A8</div>
+                  <div class="cost">$280,900</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="7" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Audi twoK">
+          <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Audi/2.1.jpeg" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Audi Q7</div>
+                  <div class="cost">$140,700</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="10" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Tesla threeK">
+          <div class="top">
+              <img src="../img/PremiumImages/tesla/tesla1.jpg" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Tesla Model X</div>
+                  <div class="cost">$201,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="12" onclick="popup2(this.id)" onclick="popUp()">Details
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="img Tesla twoK">
+          <div class="top">
+              <img src="../img/PremiumImages/tesla/tesla23.jpg" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Telsa Model Y</div>
+                  <div class="cost">$120,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="15" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Volvo threeK">
+          <div class="top">
+              <img src="../img/PremiumImages/volvo/volvo6.jpg" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Volvo S90</div>
+                  <div class="cost">$234,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="16" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Volvo twoK">
+          <div class="top">
+              <img src="../img/PremiumImages/volvo/volvo1.webp" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Volvo XC90</div>
+                  <div class="cost">$190,000</div>
+              </div>
+              <div class="bot2">
+                  <div class=" details" id="13" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Infiniti oneK">
+          <div class="top">
+              <img src="../img/PremiumImages/infinite/infinate13.jpg" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Infiniti QX55</div>
+                  <div class="cost">$99,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="14" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Infiniti halfK">
+          <div class="top">
+              <img src="../img/PremiumImages/infinite/infinate3.avif" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Infiniti ESQ</div>
+                  <div class="cost">$49,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="17" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Toyota oneK">
+          <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Toyota/1.1.jpeg" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Toyota Camry</div>
+                  <div class="cost">$84,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="18" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Toyota halfK">
+          <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Toyota/2.1.jpeg" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Toyota Fortuner</div>
+                  <div class="cost">$45,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="21" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Ford oneK">
+          <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Ford/2.1.jpeg" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Ford EcoSport</div>
+                  <div class="cost">$85,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="22" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Ford halfK">
+          <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Ford/1.1.jpeg" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Ford Endeavoru</div>
+                  <div class="cost">$48,900</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="19" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Kia oneK">
+          <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Kia/1.1.jpeg" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Kia Seltos</div>
+                  <div class="cost">$91,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="20" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+      <div class="img Kia halfK">
+          <div class="top">
+              <img src="../img/Luxury-and-Mainstream/Kia/2.1.jpeg" alt="" class="car-img">
+          </div>
+          <div class="bottom">
+              <div class="bot1">
+                  <div class="car_name">Kia Carnival</div>
+                  <div class="cost">$37,000</div>
+              </div>
+              <div class="bot2">
+                  <div class="details" id="23" onclick="popup2(this.id)">Details</div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <section class="footer" id="contact">
+    <div class="box-container">
+      <div class="box">
+        <img src="../css/logo_white.png"/>
+      </div>
+      <div class="box">
+        <h3>Our Branches</h3>
+        <a href=""> <i class="fas fa-map-marker-alt"></i> India </a>
+        <a href=""> <i class="fas fa-map-marker-alt"></i> France </a>
+        <a href=""> <i class="fas fa-map-marker-alt"></i> Africa </a>
+        <a href=""> <i class="fas fa-map-marker-alt"></i> Australia </a>
+        <a href=""> <i class="fas fa-map-marker-alt"></i> America </a>
+      </div>
+      <div class="box">
+        <h3>Contact</h3>
+        <a href=""> <i class="fas fa-phone"></i> +91 9262214295 </a>
+        <a href=""> <i class="fas fa-phone"></i> +91 9262214296 </a>
+        <a href=""> <i class="fas fa-envelope"></i> WWC@gmail.com </a>
+        <a href=""> <i class="fas fa-map-marker-alt"></i> Kakinada, India </a>
+      </div>
+      <div class="box">
+        <h3>Quick Links</h3>
+        <a href="https://www.facebook.com/"> <i class="fab fa-facebook-f"></i> Facebook </a>
+        <a href="https://x.com/"> <i class="fab fa-twitter"></i> Twitter </a>
+        <a href="https://www.instagram.com/"> <i class="fab fa-instagram"></i> Instagram </a>
+        <a href="https://www.linkedin.com/"> <i class="fab fa-linkedin"></i> Linkedin </a>
+        <a href="https://in.pinterest.com/"> <i class="fab fa-pinterest"></i> Pinterest </a>
+      </div>
+    </div>
+    <div class="credit"> Create by drive designer group | All Rights Reserved! </div>
+  </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../slick-1.8.1/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="../slick-1.8.1/slick-1.8.1/slick/slick.js"></script>
+    <script>
+      $(".carousel-1").slick({
+        lazyLoad: "ondemand",
+        dots: true,
+        arrows: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        prevArrow: '<button type="button" class="slick-prev"><</button>',
+        nextArrow: '<button type="button" class="slick-next">></button>',
+      });
+    </script>
+    <script src="../js/Car_Luxury.js"></script>
+  </body>
+</html>
